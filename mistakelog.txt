@@ -1,0 +1,70 @@
+From here on out I will log my errors within python with an explanation of what they mean.
+BIG mistke 1
+phyton ex7.py
+This runs python 2.7 which is INCOMPATIBLE with 3.6 and that is why my phython had errors in it....
+ERROR 2
+Traceback (most recent call last):
+  File "ex8.py", line 7, in <module>
+    print(formatter.format("one", 'two', 'three', "four"))
+IndexError: tuple index out of range
+CAUSE: This is due to me not using enough variables to assign to the formatter vairable which I changed to 5 variables
+
+ERROR 3
+  File "ex11.py", line 11
+    
+    ^
+SyntaxError: unexpected EOF while parsing
+
+CAUSE:unterminated qoutation
+
+ERROR 4
+This was due to an UNTERMINATED ) on the PREVIOUS LINE that is definitly a thing. If you get an error on one line look at the previous line TOO
+
+ERROR 5 
+Traceback (most recent call last):
+  File "ex11.py", line 15, in <module>
+    dowhatiwant = input("I am becoming more dangerous wouldnt you say",end=' ')
+TypeError: input() takes no keyword arguments
+
+CAUSE: You cant include end=' ' at the end of an input you will get an error dowhatiwant = input("I am becoming more dangerous wouldnt you say",end=' ')
+
+ERROR 6 
+Traceback (most recent call last):
+  File "ex12.py", line 4, in <module>
+    weight = iput("How old are you? ")
+NameError: name 'iput' is not defined
+jeremy@jeremy-Work-Computer:~/Desktop/
+
+CAUSE: iput instead of input
+
+ERROR 7 
+Traceback (most recent call last):
+  File "ex13.py", line 5, in <module>
+    script, frist, second, third = argv
+ValueError: too many values to unpack (expected 4)
+CAUSE: this is caused when using a module and you only defined a couple of variables and you exceeded that amount
+
+ERROR 8 
+ File "ex18.py", line 4
+    arg1, arg2 = args
+       ^
+IndentationError: expected an indented block
+CAUSE: I forgot to indent the function arguments, THAT IS REQUIRED interesting!
+
+ERROR 9
+  File "ex18.py", line 9
+    def print_two_again(arg1,arg2)
+                                 ^
+SyntaxError: invalid syntax
+CAUSE: I forgot to terminate the def with a : like so:
+def print_none():
+
+ERROR 10
+Traceback (most recent call last):
+  File "ex20.py", line 32, in <module>
+    print_a_line(current_line, current_file)
+TypeError: 'tuple' object is not callable
+CAUSE:
+I accidentally did this 
+#predefined funciton 
+print_a_line = (arg1,arg2) 
