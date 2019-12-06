@@ -1,0 +1,47 @@
+----------------------------------------------------------------------------------------------------------------------------------------
+Type irb in the terminal to run commands immediately similar to running python without any commands
+----------------------------------------------------------------------------------------------------------------------------------------
+puts will print to console
+-----------------------------------------------------------------------------------------------------------------------------------------
+ruby files end in .rb
+----------------------------------------------------------------------------------------------------------------------------------------
+# is a single line comment
+----------------------------------------------------------------------------------------------------------------------------------------
+BACKSLASH \ is the escape character but if you dont use it right it will make
+some of your code disappear interesting!
+----------------------------------------------------------------------------------------------------------------------------------------
+You can use single and double qoutes in puts
+----------------------------------------------------------------------------------------------------------------------------------------
+Sadly multiline comments DO NOT EXIST IN RUBY HUGE BUMMER
+----------------------------------------------------------------------------------------------------------------------------------------
+== checks if tow somethings are equal can be strings and numbers
+number == number
+----------------------------------------------------------------------------------------------------------------------------------------
+ruby uses the classic math operators % is the wierd one it divides and subtractsshowing what remains
+----------------------------------------------------------------------------------------------------------------------------------------
+You can reference variables directly in strings like so
+puts "There are #{cars} cars available."
+----------------------------------------------------------------------------------------------------------------------------------------
+When adding numbers within strings make sure that they are actually declared i the = as a number not a string otherwise they will be concatenated together.
+----------------------------------------------------------------------------------------------------------------------------------------
+When using variables in strings you have to use double quotes with single it
+----------------------------------------------------------------------------------------------------------------------------------------
+This is probably not importan but in case a redundancy like this may come in
+handy I will note it. You can put string in a string using the #{} format #{'somestring'}
+----------------------------------------------------------------------------------------------------------------------------------------
+ERROR in lesson 8 1 2 3 4
+one two three four
+Traceback (most recent call last):
+	1: from ex8.rb:7:in `<main>'
+ex8.rb:7:in `%': key{third} not found (KeyError)
+Did you mean?  :thrid
+MISSPELLED third
+----------------------------------------------------------------------------------------------------------------------------------------
+So the % character can make it easier to use the same formatting for multiple items apparently
+see ex8 for more deets. I dont understand ex 8 enough to be honest so here is a link explaining
+more about it but it still went over my head: http://teohm.com/blog/start-using-ruby-percent-notation/
+So I decided to run the examples that are included in the link in ex 8
+ACTUALLY I decided to come back after and learn what each does on here http://en.wikibooks.org/wiki/Ruby_Programming/Syntax/Literals#The_.25_Notation
+and here https://en.wikibooks.org/wiki/Ruby_Programming
+
+----------------------------------------------------------------------------------------------------------------------------------------

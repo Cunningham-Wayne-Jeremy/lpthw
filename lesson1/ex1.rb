@@ -1,0 +1,12 @@
+puts "Hello World"
+puts "Hello again"
+puts "puts then \"\"'s and inside those qoutes words"
+puts "Looks like \\ is the escape character?"
+puts "Yes it is!"
+puts "this is ok"
+puts "I would rather be doing more intense coding"
+puts "but you gotta start somewhere"
+puts "You can use single qoutes 'inside' double like other coding languages"
+puts 'You can use double qoutes "inside" single too' #This is a comment
+#puts "This wont run"
+puts "The wording in the common student questions is wrong # will be ignored here."
