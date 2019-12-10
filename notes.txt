@@ -1,4 +1,4 @@
------------------------------------------------------------------------------------------------------
+﻿-----------------------------------------------------------------------------------------------------
 The print command has ()s after it like so print()
 It can print letters numbers and variables
 # is the comment character
@@ -730,6 +730,18 @@ mylist = ["first", "second", "Third" , "fourth"]
 print("|".join(mylist))
 
 This would print first|second|Third|fourth
+
+----------------------------------------------------------------------------------------------------
+Lists have a method called insert that will insert an item in the list at a given point in the array
+like so: 
+myarray[1,3,4,5]
+myarray.insert(1,2)
+----------------------------------------------------------------------------------------------------
+Other List properties are .delete(array_#),.pop(# or leave blank for last element), .remove(value), 
+.sort(), .reverse(), min(myarray), max(myarray) and sum(myarray)
+----------------------------------------------------------------------------------------------------
+Dont forget the list function that will take a string of things and turn it into a list. You usually
+use this with range but it can be usedwith anything, numbers, strings ANYTHING and dont forget it!
 ----------------------------------------------------------------------------------------------------
 Data Structures are a way to structure or organize data, that is really all there is to it! Not to
 say that the data structures dont get stupidly complex, keep that in mind that they organize data.
@@ -1310,6 +1322,9 @@ cities['NY'] = "New York"
 That will add a dictionary value to the existing dict called cities. With the key being NY and the
 value of New York
 ----------------------------------------------------------------------------------------------------
+All dictionaries have the following methods mydict.keys() and my dict.values(). These can be used to
+isolate the key and value pairs! They also have mydict.items() for nested dictionaries.
+----------------------------------------------------------------------------------------------------
 Remember that you can nest dictionaries and can use variables and can use things with other things
 of course!
 ----------------------------------------------------------------------------------------------------
@@ -1541,9 +1556,33 @@ print(scan("I will go south then north then south then right then down"))
 Thats right you included the return in the for loop! STOP DOING THAT JEREMY
 ----------------------------------------------------------------------------------------------------
 The methods: seek, readline and readlines all operate on size in bytes which is difficult to pin down
+----------------------------------------------------------------------------------------------------
+r.strip l.strip and strip all remove white space from strings. l will remove space from the left
+r the right and strip the entire string. Strip is a METHOD and can be declared like so:
+ 
+somestring = "  yoo oooo oooooo        "
+somestring.strip()
+----------------------------------------------------------------------------------------------------
+When writing large numbers you can use underscores to make the code easier to read for humans like so
+140_000_000. 
+----------------------------------------------------------------------------------------------------
+Here is a great place to check coding language popularity!
+https://www.tiobe.com/tiobe-index/
+----------------------------------------------------------------------------------------------------
+You can use commas to declare multiple variables at once like so:
+x, y, z = 10, 20, 30
 
+You can also pick multiple items from for loops
 
-
+for y,j in mydict:
+----------------------------------------------------------------------------------------------------
+CONVENTION 
+Use all caps to declare a variable that is a constant, or a variable that should not be changed.
+MY_VAR = 10
+That is a convention that python devs use to say DONT EDIT THAT VAR!
+----------------------------------------------------------------------------------------------------
+import this - Zen of Python, enter it into the python module to learn code conventions of python!
+----------------------------------------------------------------------------------------------------
 
 
 
