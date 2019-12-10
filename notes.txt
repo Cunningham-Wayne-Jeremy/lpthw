@@ -733,11 +733,11 @@ This would print first|second|Third|fourth
 
 ----------------------------------------------------------------------------------------------------
 Lists have a method called insert that will insert an item in the list at a given point in the array
-like so: 
+like so:
 myarray[1,3,4,5]
 myarray.insert(1,2)
 ----------------------------------------------------------------------------------------------------
-Other List properties are .delete(array_#),.pop(# or leave blank for last element), .remove(value), 
+Other List properties are .delete(array_#),.pop(# or leave blank for last element), .remove(value),
 .sort(), .reverse(), min(myarray), max(myarray) and sum(myarray)
 ----------------------------------------------------------------------------------------------------
 Dont forget the list function that will take a string of things and turn it into a list. You usually
@@ -1559,12 +1559,12 @@ The methods: seek, readline and readlines all operate on size in bytes which is 
 ----------------------------------------------------------------------------------------------------
 r.strip l.strip and strip all remove white space from strings. l will remove space from the left
 r the right and strip the entire string. Strip is a METHOD and can be declared like so:
- 
+
 somestring = "  yoo oooo oooooo        "
 somestring.strip()
 ----------------------------------------------------------------------------------------------------
 When writing large numbers you can use underscores to make the code easier to read for humans like so
-140_000_000. 
+140_000_000.
 ----------------------------------------------------------------------------------------------------
 Here is a great place to check coding language popularity!
 https://www.tiobe.com/tiobe-index/
@@ -1576,13 +1576,60 @@ You can also pick multiple items from for loops
 
 for y,j in mydict:
 ----------------------------------------------------------------------------------------------------
-CONVENTION 
+CONVENTION
 Use all caps to declare a variable that is a constant, or a variable that should not be changed.
 MY_VAR = 10
 That is a convention that python devs use to say DONT EDIT THAT VAR!
 ----------------------------------------------------------------------------------------------------
 import this - Zen of Python, enter it into the python module to learn code conventions of python!
 ----------------------------------------------------------------------------------------------------
+Parameter vs an argument:
+Parameters are the place holders that functions will require arguments for when ran
+Arguments are the actual values that replace those placeholders
+def myfunction(parameter1,parameter2)
+    print(paramter1,parameter2)
 
+myfunction("Print", "something")
+----------------------------------------------------------------------------------------------------
+Positional arguments vs keyword arguments:
 
+Positional arguments are separated by commas and must be in a particular order, the arguments must
+match the order of the parameters otherwise you will get logical errors. That is why they are
+positional arguments, because the order of the parameters matters.
+
+Keyword arguments use the place holders as the keys to the arguments value. They are used in the
+actual function call like so:
+
+def somefunc(name, title):
+    print(name, title)
+
+somefunc(name = "James", title = "CEO")
+
+What is interesting about key word arguments is that you can assign values to one of the keys in the
+declaration of the function like so:
+
+somevar = "CEO"
+def somefunc(name, title=somevar):
+    print(name, title)
+
+somefunc(name = "James")
+
+Now when you run the function it only needs one argument to run! or you can overrite that value
+----------------------------------------------------------------------------------------------------
+===================================================================================================
+WARNING!!!!!!!!!!!!!!!!!!!!!!
+===================================================================================================
+When combining positional arguments and kw arguments make sure that you dont mix up the order of the
+positional arguments:
+For example:
+
+somevar = "CEO"
+def somefunc(title=somevar, name):
+    print(title, name)
+
+somefunc(name = "James")
+
+As title is first the function will overwrite the value of title to James and will error out becuase
+name wont have a value.
+----------------------------------------------------------------------------------------------------
 
