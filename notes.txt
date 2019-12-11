@@ -1642,4 +1642,46 @@ def names(first_name, middle_name = "", last_name)
     #yea yea two spaces get over it do an if statement mr perfect
 names("James","Jonas")
 ----------------------------------------------------------------------------------------------------
+As you know [:] will select all of the items from a list, or that is what I thought it did. What it
+actually does is make a copy of that list. This can be used to your advantadge when you pass a copy
+to a function (in the function call) like so:
+the_original = [1,2,3,4,5]
+def myfunction(some_array)
+    some_array.pop()
+    print(some_array)
+
+myfunction(the_original[:])
+print(the_original)
+
+If you call that function you will notice that the original remains the same
+----------------------------------------------------------------------------------------------------
+def make_a_pizza(*toppings):
+    print(f"Okay, so I got {*toppings} is that right?")
+
+make_a_pizza(cheese, sausage, peporonni, mushrooms)
+
+When defining functions its possible that you may not know how many parameters to anticipate. To make
+this easier Python allows the *args or *(whatevername you want here). *args allows as many positional
+arguments as you want. What happens behind the scenes is Python will take those arguments supplied
+to it when the function is called and assign them to a tuple which is an uneditable list.
+
+**kw does the same thing except for key words and packs them into a dict.
+----------------------------------------------------------------------------------------------------
+What happens when you import a module, even one that is in the same directory?
+Well python will take ALL of the functions and copy them to the current file that is being ran the
+moment the import is found within the code (that is why you keep the imports at the top. Then those
+functions are used like normal if you imported the functions directly or with modulename.funcname
+if you imported the entire module.
+
+That is why specifying the right functions you want like this:
+from os import system, something_else, something_else_else
+Is a best practice.
+
+You can even change the function name OR module name with as new_name like so.
+from os import system as this_is_mine_now.
+
+Of course you can also import all functions from a module with *
+from os import *
+----------------------------------------------------------------------------------------------------
+
 
