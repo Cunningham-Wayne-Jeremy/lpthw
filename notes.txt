@@ -1632,4 +1632,14 @@ somefunc(name = "James")
 As title is first the function will overwrite the value of title to James and will error out becuase
 name wont have a value.
 ----------------------------------------------------------------------------------------------------
+One of the reasons that we have key word arguments is the ablility to have an optional parameter.
+If you assign that parameter a default value in the declaration of the function you will not need
+to define that parameter at function call.
+
+For example:
+def names(first_name, middle_name = "", last_name)
+    print(f"Your full name is {first_name} {middle_name} {last_name})
+    #yea yea two spaces get over it do an if statement mr perfect
+names("James","Jonas")
+----------------------------------------------------------------------------------------------------
 
