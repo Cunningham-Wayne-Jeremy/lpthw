@@ -1,3 +1,0 @@
-The print command has ()s after it like so print()
-It can print letters numbers and variables
-# is the comment character

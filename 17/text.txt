@@ -1,2 +1,0 @@
-This is some text that we will copy over using the python function called write or is it an attribute? 
-I dont know but I want to learn and be curious!
