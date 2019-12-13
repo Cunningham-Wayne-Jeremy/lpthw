@@ -1681,7 +1681,22 @@ You can even change the function name OR module name with as new_name like so.
 from os import system as this_is_mine_now.
 
 Of course you can also import all functions from a module with *
-from os import *
+from os import *.
 ----------------------------------------------------------------------------------------------------
+Import * is considered a mal practice as it will import all functions without specifying what the
+function's being imported are called. This can cause developers to import a function whose name has
+already been createdi in the code which would cause irregularities and logical errors.
+----------------------------------------------------------------------------------------------------
+BEST PRACTICES PEP 8
+Classes shold begin with a captial letter and words should be separated by _'s
 
+Functions should be lower case and words separeted by _'s.
+
+All import statements should be located at the beginning of a file.
+
+Keep all lines of code in Python to a 79 character limit. Should a function's set of paramerters cause
+a function to go over the 79 cahracter limit, you should write the first parenthesis and then on a new
+line press tab twice and then list all of the parameters, continueing this pattern until the end of the
+function definition.
+----------------------------------------------------------------------------------------------------
 
