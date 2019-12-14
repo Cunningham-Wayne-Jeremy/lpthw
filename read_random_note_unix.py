@@ -1,8 +1,8 @@
 from random import randint
 import os
-cmd = "ls -l ~/lpthw/notes.txt | grep notes.txt | awk '{print $5}'"
+cmd = "ls -l /Users/jercun/Desktop/lpthw/notes.txt | grep notes.txt | awk '{print $6}'"
 total = os.popen(cmd).read()
-notes = open("/home/foss-ter/lpthw/notes.txt")
+notes = open("/Users/jercun/Desktop/lpthw/notes.txt")
 #motd = open("/etc/motd", "w")
 count = 0
 # I could do a get size of the file then do a range based on the bytes of that file then check for -'s and increase count by 1 then print out the line
