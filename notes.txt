@@ -1664,9 +1664,10 @@ def make_a_pizza(*toppings):
 
 make_a_pizza(cheese, sausage, peporonni, mushrooms)
 
-When defining functions its possible that you may not know how many parameters to anticipate. To make
-this easier Python allows the *args or *(whatevername you want here). *args allows as many positional
-arguments as you want. What happens behind the scenes is Python will take those arguments supplied
+When defining functions its possible that you may not know how many parameters to anticipate.To
+make this easier Python allows the *args or *(whatevername you want here). *args allows as many
+positional arguments as you want. What happens behind the scenes is Python will take those
+arguments supplied
 to it when the function is called and assign them to a tuple which is an uneditable list.
 
 **kw does the same thing except for key words and packs them into a dict.
@@ -1692,15 +1693,42 @@ function's being imported are called. This can cause developers to import a func
 already been createdi in the code which would cause irregularities and logical errors.
 ----------------------------------------------------------------------------------------------------
 BEST PRACTICES PEP 8
-Classes shold begin with a captial letter and words should be separated by _'s
+Classes should begin with a captial letter and each word should be capitalized:
+MyClass(Object)
 
-Functions should be lower case and words separeted by _'s.
+Functions should be lower case and words seperated by _'s.
 
 All import statements should be located at the beginning of a file.
 
-Keep all lines of code in Python to a 79 character limit. Should a function's set of paramerters cause
-a function to go over the 79 cahracter limit, you should write the first parenthesis and then on a new
-line press tab twice and then list all of the parameters, continueing this pattern until the end of the
-function definition.
+Keep all lines of code in Python to a 79 character limit. Should a function's set of paramerters
+cause a function to go over the 79 cahracter limit, you should write the first parenthesis and
+then on a new line press tab twice and then list all of the parameters, continueing this pattern
+until the end of the function definition.
 ----------------------------------------------------------------------------------------------------
+<<<<<<< HEAD
+The python key word with is used with another key word as to assign something to a variable. Like so:
+filename = "full/path/to/filename"
+with open(filename) as file_object_variable:
+    for line in file_object_variable:
+        print(line)
+file_object_variable.close()
+
+You will notice though that the with is some sort of THING in python as it ends with a colon. and
+similar to functions its block needs to be tabbed in.
+
+Its good to note that the varibale in that is assigned when declaring the with statement is only
+available inside the with block. If you need the value of the variable returned just return it or
+assign the value of that variable to a new tag
+=======
+Why is super called super? its from other coding classes OOP lingo, super is short for super class
+and the child class are often called sublcasses in other languages.
+----------------------------------------------------------------------------------------------------
+QUESTION - Does every child of a parent class inherit all of the functions of the parent? Maybe...
+What about __init__?
+----------------------------------------------------------------------------------------------------
+A confusing way to word or peak of composition is to call it "Instances as Attributes". While it is
+correct I find it weird to say!
+>>>>>>> 76860b17dd877513417c5fbc4fd3c96506dabfdd
+----------------------------------------------------------------------------------------------------
+
 
