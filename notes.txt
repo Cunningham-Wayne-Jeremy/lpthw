@@ -1728,7 +1728,6 @@ What about __init__?
 ----------------------------------------------------------------------------------------------------
 A confusing way to word or peak of composition is to call it "Instances as Attributes". While it is
 correct I find it weird to say!
->>>>>>> 76860b17dd877513417c5fbc4fd3c96506dabfdd
 ----------------------------------------------------------------------------------------------------
 
 
