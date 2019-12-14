@@ -1456,7 +1456,7 @@ understanding Zeds logic of how he created the classes and put them inside each 
 and it blew my mind. That isnt hard to understand once you separate it out into concepts, a thng in
 python can be used with another thing, even as a parameter to another thing.
 ----------------------------------------------------------------------------------------------------
-                            THE 5 GOLDEN RULES OF SELF
+                            THE 6 GOLDEN RULES OF SELF
 
 OK I have learned a valuable lesson here, which is HOW and WHEN to use self.
 
@@ -1475,6 +1475,10 @@ self.parameter_name = parameter_name or python will say that parameter is missin
 
 Fifth - If you plan on chaining object functions and it starts with an instance then ALL of
 the functions will need to include self in the function parameters, DONT FORGET THAT!
+
+Sixth - While inside the definition of the class you should use
+self.attibute_name or self.function name. But after declaration and initialization you must use
+instance_name.function or instance_name.attribute
 ----------------------------------------------------------------------------------------------------
 To understand objects and how to make them feed into each other I pasted a snippet from ex43 with
 commentary on the lines that matter most:
