@@ -1699,4 +1699,19 @@ a function to go over the 79 cahracter limit, you should write the first parenth
 line press tab twice and then list all of the parameters, continueing this pattern until the end of the
 function definition.
 ----------------------------------------------------------------------------------------------------
+The python key word with is used with another key word as to assign something to a variable. Like so:
+filename = "full/path/to/filename"
+with open(filename) as file_object_variable:
+    for line in file_object_variable:
+        print(line)
+file_object_variable.close()
+
+You will notice though that the with is some sort of THING in python as it ends with a colon. and
+similar to functions its block needs to be tabbed in.
+
+Its good to note that the varibale in that is assigned when declaring the with statement is only
+available inside the with block. If you need the value of the variable returned just return it or
+assign the value of that variable to a new tag
+----------------------------------------------------------------------------------------------------
+
 
