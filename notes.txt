@@ -1705,7 +1705,6 @@ cause a function to go over the 79 cahracter limit, you should write the first p
 then on a new line press tab twice and then list all of the parameters, continueing this pattern
 until the end of the function definition.
 ----------------------------------------------------------------------------------------------------
-<<<<<<< HEAD
 The python key word with is used with another key word as to assign something to a variable. Like so:
 filename = "full/path/to/filename"
 with open(filename) as file_object_variable:
@@ -1719,7 +1718,13 @@ similar to functions its block needs to be tabbed in.
 Its good to note that the varibale in that is assigned when declaring the with statement is only
 available inside the with block. If you need the value of the variable returned just return it or
 assign the value of that variable to a new tag
-=======
+
+All I will say is that the with statement is meant to run a function or other object and its a little
+complicated when used with your own methods/functions that you have created as you will need to
+declare a dunder enter method and a dunder close method. If you use with with built in functions this
+is either not necessary or already included with the builtin function. More information can be found
+here: https://docs.python.org/2.5/whatsnew/pep-343.html
+----------------------------------------------------------------------------------------------------
 Why is super called super? its from other coding classes OOP lingo, super is short for super class
 and the child class are often called sublcasses in other languages.
 ----------------------------------------------------------------------------------------------------
@@ -1729,5 +1734,35 @@ What about __init__?
 A confusing way to word or peak of composition is to call it "Instances as Attributes". While it is
 correct I find it weird to say!
 ----------------------------------------------------------------------------------------------------
+I wonder how try and except blocks work? Must you know the type of error to except and include the
+name of that error catching method in the except block? There must be a generic error right?
+----------------------------------------------------------------------------------------------------
+What composes a try block? A try statement, an except statement and an else statement. The try goes
+around the code that may cause an error. The except block will run when there IS an error and the
+else block will run if the try block was sucessful and WILL NOT Run if the try block fails. Pretty
+cool.
+----------------------------------------------------------------------------------------------------
+Here is some food for thought to enforce the idea that things work with other things in code: Make
+a function that takes a single parameter. Make a list full of possible paramters for that function.
+Make a for loop that will supply that function with all of the paramters (pretty fun concept!)
+----------------------------------------------------------------------------------------------------
+The str.count("word") will count how many times a word occurs in a sting.
+----------------------------------------------------------------------------------------------------
+JSON.dump and json.load with the import json module. I am sure there is more
+to this module that will need to be investigating later, for now though its
+good to know that json can save and load data from file objects in python.
 
+file = input("file")
+opened_file = open(file,"w")
+var = 1 + 2 + 3
+json.dump(var, opened_file)
+json.load(opend_file)
+----------------------------------------------------------------------------------------------------
+Coding lingo:
+Refactoring: dividing up code into small single purpose reusable fragments to make code clean,
+reusable and human readable. This breaks up complex blocks of code to simple step by step functions
+
+Docstring - """ Commenting out code like this is called a docstring as it can go across multiple
+lines"""
+----------------------------------------------------------------------------------------------------
 
