@@ -1764,5 +1764,56 @@ reusable and human readable. This breaks up complex blocks of code to simple ste
 
 Docstring - """ Commenting out code like this is called a docstring as it can go across multiple
 lines"""
+
+Unit test - a verification test that will verify that one specific aspect of a function is working
+properly.
+
+Test case - A collection of unit tests that prove that a function is working properly.
+
+Full Coverage - a full range of unit tests that cover all of the possible ways that you can use
+the function and ensure that its working properly. Full coverage is rare and is often only done
+when your project has obtained a large following. Test cases for critical operation of your code
+is considered the norm.
 ----------------------------------------------------------------------------------------------------
+Unit testing with Python
+Python has a module for unit testing called unittest. To use it all you need do is import unittest
+Then create a class from the unit test module by inheriting from unittest.TestCase. Best practice
+dictates that somewhere in the class name you include the word Test. The class should be full of
+methods that ALL begin with the word test. This is done so that unittest.main() will run the test
+function when its called.
+----------------------------------------------------------------------------------------------------
+QUESTION - When calling unittest all of the examples had an if statement at the end like so:
+if __name__ == '__main__':
+    unittest.main()
+
+I have no idea why.... it mentions it on 212 of python crash course but the explanation is lacking
+at best.
+----------------------------------------------------------------------------------------------------
+When performing/ writing unit tests assert methods are often used. There are different types of
+assert metods but all of them verify certain types of output in different ways. Here is a list of
+the different types of asset equals:
+
+|=========================================================|
+|assertEqual(a,b) - verify that a == b                    |
+|=========================================================|
+|assertNotEqual(a,b) - verify that a != b                 |
+|=========================================================|
+|assertTrue(x) - verify that x is True                    |
+|=========================================================|
+|assertFalse(x) - verify that x is False                  |
+|=========================================================|
+|assertIn(item,list) - verify that item is in list        |
+|=========================================================|
+|assertNotIn(item,list) - verify that item is not in list |
+|=========================================================|
+----------------------------------------------------------------------------------------------------
+When a unit test fails it will first print out an E on one line just FYI
+----------------------------------------------------------------------------------------------------
+Modules that I have come across that may help me in the future:
+os system and popen
+AnonymousSurvey
+random randint
+----------------------------------------------------------------------------------------------------
+
+
 
