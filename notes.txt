@@ -1425,7 +1425,7 @@ except ImportError:
 ----------------------------------------------------------------------------------------------------
 print(*var)  - take any nunber of args
 print(**var) - take any number of option arguments
-QUESTION WHAT IS THE DIFFERENCE BETWEEN optional arguments and the other one?
+QUESTION WHAT IS THE DIFFERENCE BETWEEN optional arguments and key word arguments?
 ----------------------------------------------------------------------------------------------------
 Python setup.py install from the cli will install your pacakge that you created in ex47 and 48
 This is how you make pacakges that other can download through pip
@@ -1728,7 +1728,7 @@ here: https://docs.python.org/2.5/whatsnew/pep-343.html
 Why is super called super? its from other coding classes OOP lingo, super is short for super class
 and the child class are often called sublcasses in other languages.
 ----------------------------------------------------------------------------------------------------
-QUESTION - Does every child of a parent class inherit all of the functions of the parent? Maybe...
+QUESTION - Does every child of a parent class inherit all of the functions of the parent?
 What about __init__?
 ----------------------------------------------------------------------------------------------------
 A confusing way to word or peak of composition is to call it "Instances as Attributes". While it is
@@ -1814,6 +1814,41 @@ os system and popen
 AnonymousSurvey
 random randint
 ----------------------------------------------------------------------------------------------------
+QUESTION: What does the following mean? Why not just call the unit test function directly?
+if __name__ == '__main__':
+    unittest.main()
 
+ANSWER:
+To understand this you need to know 2 things. First when you import a module python will run that
+code so that is why it needs to be inside a function so its not going to just trigger on import.
+Second you need to make two files and import one inside the other and print out the varible __name__
+
+Lets do that:
+first_file.py
+print(f"First modules name is {__name__}"
+
+second_file.py
+import first_file.py
+# Now Remember! Python is going the code from first_file.py first so we will see the value of __name__
+print(f"Second modules name is {__name__}")
+
+Now run first_file.py first and you will notice that the value of __name__ is '__main__'
+Now run the second_file.py and you will see that the value of the first is now set to first_file and
+the value of the second_file __name__ is now '__main__'
+
+Now why is this used? It allows you to run a module by itself for testing, but like everything else in
+the coding world this concept can be used with just about anything. __name__ is a simple way to use a
+python default behavior to your advantage.
+
+This would be helpful when you do not what the code to run when imported but you want to run it by
+itself for testing or you may want to have the code run differently when imported versus when its
+ran directly.
+
+So in other words if you DONT want your script that you made to be imported and used inside other
+modules you can include an if statement inside the imported module that will only call the function if
+its not inside another module.
+
+Of course you could still call it directly by specifying the name_of_module.function_name.
+----------------------------------------------------------------------------------------------------
 
 
