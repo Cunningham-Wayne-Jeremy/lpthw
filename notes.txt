@@ -1765,4 +1765,19 @@ reusable and human readable. This breaks up complex blocks of code to simple ste
 Docstring - """ Commenting out code like this is called a docstring as it can go across multiple
 lines"""
 ----------------------------------------------------------------------------------------------------
+How to use Flask tutorial:
+The syntax for FLask is as follows:
 
+class flask.Flask(import_name, static_url_path=None, static_folder='static', static_host=None,
+host_matching=False, subdomain_matching=False, template_folder='templates', instance_path=None,
+instance_relative_config=False, root_path=None)
+
+You will notice that the template folder is the only keyword argument specified and it is set to use
+the templates folder. So you will need a folder called templates.
+
+To use flask we will need to instantiate an instance like so:
+from flask import Flask
+app = Flask(__name__)
+
+We will use the dunder name here so that it can be dynamic in case its called
+somewhere else.
