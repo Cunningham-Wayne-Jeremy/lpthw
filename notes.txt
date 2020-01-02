@@ -1854,19 +1854,57 @@ its not inside another module.
 
 Of course you could still call it directly by specifying the name_of_module.function_name.
 ----------------------------------------------------------------------------------------------------
-
->>>>>>> e7747d1e49ced0ab40039b3ed4b0b9665e820e3b
+Flask Tutorial:
 
 class flask.Flask(import_name, static_url_path=None, static_folder='static', static_host=None,
 host_matching=False, subdomain_matching=False, template_folder='templates', instance_path=None,
 instance_relative_config=False, root_path=None)
 
-You will notice that the template folder is the only keyword argument specified and it is set to use
-the templates folder. So you will need a folder called templates.
+You will notice that the template folder and the static folders are the only keyword arguments so
+you will need a folder called templates and a static folder.
 
 To use flask we will need to instantiate an instance like so:
 from flask import Flask
 app = Flask(__name__)
 
-We will use the dunder name here so that it can be dynamic in case its called
-somewhere else.
+Only use __name__ if the application you are running is contained within one module or one py file.
+If that is not the case you should instead use the full path to the application python file that
+ties everything together. If you use __name__ it will still work but debugging information wont be
+accurate as the full path was not given.
+
+QUICK START:
+
+from flash import Flask
+app = Flask(__name__)
+
+@app.route('/')
+def hello_world():
+    return 'Hello World!'
+----------------------------------------------------------------------------------------------------
+QUESTION: what is the difference between a module and a package? Well a module is just a py file.
+All you do to import it is this
+import modfile
+
+A package is a collection of py files and other files that together make up an application. A
+package will have an __init__.py file inside of the folder/folders that contain the package.
+There is a convention on how to make these folders and it can be found in excercises 48-50 of
+lpthw or probably somewhere in PEP8.
+----------------------------------------------------------------------------------------------------
+NOTE ON PASS
+pass does not exit the function like return does. For example:
+def my_func():
+    pass
+    print("something")
+
+def my_func2_two():
+    return
+    print("something else")
+
+my_func()
+my_func_two()
+
+The above code will run but the second function exits as soon as it gets to the return statement as
+I expected but the pass doesnt exit it just continues which I didnt know about!
+----------------------------------------------------------------------------------------------------
+
+
