@@ -1,59 +1,59 @@
-﻿-----------------------------------------------------------------------------------------------------
+﻿----------------------------------------------------------------------------------------------------
 The print command has ()s after it like so print()
 It can print letters numbers and variables
 # is the comment character
------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
 For some odd reason the print("string", 1 + 2) fails I do not understand why
 Its because you were using python 2.0 derp to avoid this use python3.6 ex2.py
------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
 PEMDAS isnt as simple as the acronym suggests its actually better represented
 as PE (M&D) (A&S) so Parenthesis, exponents THEN Multiplication and division
 happen at the same time andaddition and subtraction happen at the same time
 after that.
------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
 Variables are easily declared in python just variable name = something
------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
 f is a formatting character and is used to reference variables inside strings
 for example print(f"My age is {my_age}.") pretty simple but keep in mind that in
 a print statement the f goes INSIDE the Parenthesis but outside the quotations
------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
 You can use f in variables like so: var1 = f"Its the same {var}" REMEMBER that
------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
 You can also use stat a string with a {} in a variable and then you can change
 it later. For example x = "No f yet but we will leave some {} here"
 print(x.format(brackets))
 You only need one variable and the print function. I assume there are other ways
 to do this without the print function though. Its very interesting REMEMBER THIS
------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
 You can use the + to concatenate strings and variables as well
------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
 # the .format('snow')) can be used to change the values within the curly brackets
 #but if there are multiple brackets how do you differentiate them from each other?? It goes first
 come first serve like so:
 print(x.format(first, second, third))
 #The reason this is important is that it can be used in loops or other situations
  where a string is already defined?
------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
 f is the same as .format(). For example
 print("Its fleece was white as {}".format('snow'))
 The above code is the same as:
 print(f"Its fleece was white as {snow}")
------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
 print("a" * 10) This will print the character a 10 times interesting that you can
 do math on strings.
------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
 ,end="" allows you to print on the same line. If you use: + " " it will perform
 a line break which may not be the desired result.
 So Remember , end=" " means no line break where + will add a line break
------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
 placeholdervar = {}{}{}{}{}{}{}{}
 
 print(placeholdervar.format('1','2','3','4','5','6','7','8'))
 
------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
 \ is the escape character good for escaping out of quotes and getting around
 special characters
------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
 """This is a multi line string
 As long as it starts and ends with
  \"\"\" characters. It will continue
@@ -409,7 +409,8 @@ def main(language_file, encoding, errors):
 REVIEW: errors strict?? Is this some sort of built in error checking?
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------
-MISUNDERSTOOD: When using print(f"") its only neccessary when you want to combine strings WITH variables.
+MISUNDERSTOOD: When using print(f"") its only neccessary when you want to combine strings WITH
+variables.
 You can just do print(var) with no quotes and no f if you just want the var to print.(Tested this)
 ----------------------------------------------------------------------------------------------------
 ERROR EX24.PY:
@@ -419,29 +420,34 @@ File "ex24.py", line 23
 SyntaxError: invalid syntax
 FORGOT TO ADD A : after the ()'s for the function
 ----------------------------------------------------------------------------------------------------
-=====================================================================================================
+====================================================================================================
 REVIEW
-=====================================================================================================
-After quite some time without using python I decided to review what I have learned so far. Much I have forgotten but only temporarily as
-I have simply archived the knowledge and need to refreshen it and not learn it all anew. However i have decided to run each .py script
+====================================================================================================
+After quite some time without using python I decided to review what I have learned so far.
+Much I have forgotten but only temporarily as I have simply archived the knowledge and need to
+refresh it and not learn it all anew. However i have decided to run each .py script
 and also run each section of it to ensure I understand it.
 
-I picked up some things I must have missed the first time and am noting them here in this review section:
+I picked up some things I must have missed the first time and am noting them here in this review
+section:
 
-The < and > signs will automatically change the returned value to a boolean on their own which I found interesting and probably must be
+The < and > signs will automatically change the returned value to a boolean on their own which I
+found interesting and probably must be
 true in other coding languages as well
 
 EX:
-print("How intriguing that it makes the returned values a boolean automatically when running a < or > operation like 3+2<5-7. The
-answer of course is",3+2<5-7,".The less sign must change the statement automatically within phython to a boolean return value")
------------------------------------------------------------------------------------------------------
+print("How intriguing that it makes the returned values a boolean automatically when running a
+< or > operation like 3+2<5-7. The answer of course is",3+2<5-7,".The less sign must change the
+statement automatically within phython to a boolean return value")
+----------------------------------------------------------------------------------------------------
 REMEMBER: when calling functions with arguments you can perform math and even call variables for the
 arguments
 
------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
 REMEMBER: Arguments are place holders nothing more.
-The function below has 2 arguments but when you call the function the names of the supplied arguments
-can be direct input or variables with different or the same name as the argument itself. For example:
+The function below has 2 arguments but when you call the function the names of the supplied
+arguments can be direct input or variables with different or the same name as the argument itself.
+For example:
 
 def areaofsq(variable1,variable2):
     print(f"The area of the square is equal to: ", variable1*variable2)
@@ -1813,11 +1819,30 @@ Modules that I have come across that may help me in the future:
 os system and popen
 AnonymousSurvey
 random randint
+unittest
+nosetests
+pygame
+matplotlib
+plotly
 ----------------------------------------------------------------------------------------------------
-<<<<<<< HEAD
-How to use Flask tutorial:
-The syntax for FLask is as follows:
-=======
+THE SETUP METHOD
+The set up method is a method that you can define in an instance of a unittest.TestCase that will
+repurpose instances created to make intances callable across the entire class and the same with
+attributes. In this way it is similar to the __init__ without the parameters. You must prefix each
+instance created or each attribute created with the word self.
+----------------------------------------------------------------------------------------------------
+Unit tests will show the current status/final status on the first line. On that first line a period
+signifies a passed test.
+
+For example:
+..EF
+Means 2 tests have passed, the third test errors out and the last failed an assertion
+E means there is an error
+F means an assertion has failed
+
+A character for each test is printed out to the screen for easy reading during and after the test.
+
+----------------------------------------------------------------------------------------------------
 QUESTION: What does the following mean? Why not just call the unit test function directly?
 if __name__ == '__main__':
     unittest.main()
@@ -1833,24 +1858,24 @@ print(f"First modules name is {__name__}"
 
 second_file.py
 import first_file.py
-# Now Remember! Python is going the code from first_file.py first so we will see the value of __name__
-print(f"Second modules name is {__name__}")
+# Now Remember! Python is going the code from first_file.py first so we will see the value of
+__name__ print(f"Second modules name is {__name__}")
 
 Now run first_file.py first and you will notice that the value of __name__ is '__main__'
 Now run the second_file.py and you will see that the value of the first is now set to first_file and
 the value of the second_file __name__ is now '__main__'
 
-Now why is this used? It allows you to run a module by itself for testing, but like everything else in
-the coding world this concept can be used with just about anything. __name__ is a simple way to use a
-python default behavior to your advantage.
+Now why is this used? It allows you to run a module by itself for testing, but like everything else
+in the coding world this concept can be used with just about anything. __name__ is a simple way to
+use a python default behavior to your advantage.
 
 This would be helpful when you do not what the code to run when imported but you want to run it by
 itself for testing or you may want to have the code run differently when imported versus when its
 ran directly.
 
 So in other words if you DONT want your script that you made to be imported and used inside other
-modules you can include an if statement inside the imported module that will only call the function if
-its not inside another module.
+modules you can include an if statement inside the imported module that will only call the function
+if its not inside another module.
 
 Of course you could still call it directly by specifying the name_of_module.function_name.
 ----------------------------------------------------------------------------------------------------
