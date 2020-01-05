@@ -534,7 +534,13 @@ pop will remove a word from a list of strings. It may be able to remove numbers 
 RESEARCH: Should pydoc this most likely.
 -----------------------------------------------------------------------------------------------------
 QUESTION
-What is the difference in a method, function and attribute anyway?
+What is the difference in a method, function, parameter, argument, variable and attribute anyway?
+A method is a function stored within a class.
+A function is a defined function declared outside of a class.
+A parameter is the place holder you give functions when you make them def my_func(parameters_here)
+An argument is what you supply to the class, method, or function when you call it
+Attributes are variables within functions, classes and other objects.
+Variables is a loose term for anything using the asignation character "="
 -----------------------------------------------------------------------------------------------------
 pydoc -b will generate a list of installed modules and their help pages which is really cool so keep
 that in mind as a resource for ya.
@@ -1930,6 +1936,79 @@ my_func_two()
 
 The above code will run but the second function exits as soon as it gets to the return statement as
 I expected but the pass doesnt exit it just continues which I didnt know about!
+----------------------------------------------------------------------------------------------------
+dir, repr, str and help what do they do and why they are important??
+
+We all know its bad practice to do from something import * BUT doing from the python command line
+is actually quite useful! After importing a package like that you can do dir(package_name) to
+list ALL of the function, classes, instances attributes and dunder methods within that package.
+VERY HELPFUL!
+
+dir by itself will display all the varibles, packages, modules, functions, classes and instances
+that python is currently tracking
+dir(__builtins__) is a good way to see all of the error handlers that python uses as well as
+
+BUT WAIT THERE IS MORE if you dir(a_list) or dir(a_dict) you will see all of the built in methods
+that are associated with that object type making it super easy to see what built in stuff you
+can do with that object type.
+
+dir actually just pulls the data from the __dir__ of an object (which in turn takes info from the
+__ getattribute__) but if no __dir__ is found then it will take the info from the __dict__
+attribute so dir and dict can be different or the same.
+
+----------------------------------------------------------------------------------------------------
+repr- This is supposedly used in debugging and is found in every class that you create or import.
+I said supposedly becuase the repr default is a string representation of a class. That
+representation by default SUCKS, so most developers will overwrite the default to be something
+meaningful You can overwrite the default by changing it in the class, I will show you how to do
+this for str but its the same for repr just use the __repr__ method.
+
+The convention is to put __repr__ beneath the __init__ method. When you type an object name into
+python by itself it will call repr on that object just fyi.
+
+----------------------------------------------------------------------------------------------------
+str- converts things to strings including object and when used with objects its not a great
+result by default. But you can  make the description more user friendly by overriding it.
+
+class Car(object):
+  def __init__(self, color, mileage):
+    self.color = color
+    self.mileage = mileage
+a = Car("red",102000)
+print(a)
+# The above print(a) statement would print this literal useless piece of information when we used
+
+print:
+__main__.Car object at 0x7f4b7f0e0a58>
+
+But if we overwrote the dunder str method like so:
+
+class Car(object):
+    def __init__(self, color, mileage):
+        self.color = color
+        self.mileage = mileage
+    def __str__(self):
+        return f"a {self.color} car with {self.mileage}"
+
+a = Car("red",102000)
+print(a)
+
+The above would return a red car with 102000. Which is MUCH more helpful that that generic id that
+we got earlier
+----------------------------------------------------------------------------------------------------
+str vs repr - Well its all a convention but the standard is:
+str - meant to be an easy to read human consumption
+repr - unambiguous explicit as possible and is for internal use for devs rerunable as an instance
+call/creation
+
+WARNING when it comes to str(CONTAINER_OBJECT) That will show the repr result. By container obj
+I mean an array or dict. SO KEEP THAT in mind as you may need to loop it and str them
+individually.
+----------------------------------------------------------------------------------------------------
+help - python cli help is the same as pydoc except you need to use ()'s as its a builtin funciton
+of the python CLI
+----------------------------------------------------------------------------------------------------
+Some things I learned about min max obvoius built in functions that I just never used but exist
 ----------------------------------------------------------------------------------------------------
 
 
