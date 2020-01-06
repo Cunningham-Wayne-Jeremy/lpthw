@@ -2008,7 +2008,9 @@ individually.
 help - python cli help is the same as pydoc except you need to use ()'s as its a builtin funciton
 of the python CLI
 ----------------------------------------------------------------------------------------------------
-Some things I learned about min max obvoius built in functions that I just never used but exist
+MORE BUILT IN FUNCTIONS:
+min max abs (absolute) built in functions that I havent used many times but can be very helpful
 ----------------------------------------------------------------------------------------------------
-
+REMEMBER .append, .insert .pop, del for dicts and lists
+----------------------------------------------------------------------------------------------------
 
