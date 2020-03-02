@@ -2013,4 +2013,88 @@ min max abs (absolute) built in functions that I havent used many times but can 
 ----------------------------------------------------------------------------------------------------
 REMEMBER .append, .insert .pop, del for dicts and lists
 ----------------------------------------------------------------------------------------------------
+CODE WARS FROM HERE TO THE END:
+You can use abs() which checks for the absolute value. You can even do -abs(number) to ensure that
+the number remains negative.
+----------------------------------------------------------------------------------------------------
+ALPHABET - just use ascii:
+import string
+string.ascii_lowercase
+will show entire alphabet
+if you want a range do
+string.ascii_lowercase[3:24]
+----------------------------------------------------------------------------------------------------
+SPLIT A STRING into characters:
+def split(word):
+    return [char for char in word]
+Assigns it to an array as well
+NOTE: char is not a key word. You could use any var you wanted here.
+----------------------------------------------------------------------------------------------------
+When messing with codingkatas ensure that you RETURN something dont use a print statement...
+----------------------------------------------------------------------------------------------------
+Coding in these catas is really a test of what internal tools to use that are built into python.
+You rarely need to build something yourself.
+----------------------------------------------------------------------------------------------------
+SOME REGEX:
+from re import sub
+def printer_error(s):
+    # look for strings that match  the regex pattern [a-m]
+    # If they do match replace those with "" in the string s
+    # The input for this was adgsdvasdasfsasgbfvasfdgdssa something like that
+    # and it would clean out all the letters not in the a-m alphabet.
+    return "{}/{}".format(len(sub("[a-m]", "", s)),len(s))
+----------------------------------------------------------------------------------------------------
+When doing a range you can do negative numbers. For example to remove the last and first char of a
+string you can do:
+s = "sdasdasdasdsadsd"
+return s[1:-1]
+----------------------------------------------------------------------------------------------------
+While testing a solution on Coding catas I hurt my head:
+>>> a = "yo"
+>>> b = "yo yo"
+>>> a.join(b)
+'yyooyo yoyyoo'
+I was expecting yoyo yo and got yyooyo yoyyoo which hurts my head lol
+So I did it again and found out what is happening:
+>>> a = "Something"
+>>> b = "Else"
+>>> a.join(b)
+'ESomethinglSomethingsSomethinge'
+every letter in a will be joined with ALL of the string at b!
+and that is why you see join usually in this context:
+"".join so take b and append nothing to it and do it over and over.
 
+Why is join helpful? it can convert an array into a string without a FOR LOOP!
+----------------------------------------------------------------------------------------------------
+MAP! So may will apply a function to all of the items in something iterable like an array
+----------------------------------------------------------------------------------------------------
+CONVERT ARRAY TO STRING without a for loop so you can make sexy one liners!
+Say you have an array of binary numbers you would like to make strings so you can use int to
+convert them into decimal. To do this in one line use:
+int(''.join(str(a) for a in array_name),2)
+Boom converted into decimal!
+----------------------------------------------------------------------------------------------------
+HELP YOU DO ONE LINERS!
+SO first one I found is the for loop
+i for i in somearray
+I didnt see the point in doing i for i until I realized that you can attach a funciton on i and feed
+it as i. Its basically making an alias for more code so that is REALLY important in one liners.
+
+REGEX REGEX REGEX learn it know it
+----------------------------------------------------------------------------------------------------
+Reverse a string:
+stringname[::01]
+CRAZY didnt know that
+This can be used with arrays as well to reverse their order.
+DEMONSTRATION:
+
+>>> name = "Jeremy"
+>>> name[::-1]
+'ymereJ'
+>>> name2 = ["Cunningham", "Jeremy"]
+>>> name2[::-1]
+['Jeremy', 'Cunningham']
+----------------------------------------------------------------------------------------------------
+READING ABOUT REGEX:
+Regex uses a \ as its escape character. As this is the same as pythons escape character it can
+make escaping a \ pretty difficult. As such you will need to use:
