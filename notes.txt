@@ -2098,3 +2098,14 @@ DEMONSTRATION:
 READING ABOUT REGEX:
 Regex uses a \ as its escape character. As this is the same as pythons escape character it can
 make escaping a \ pretty difficult. As such you will need to use:
+
+
+----------------------------------------------------------------------------------------------------
+One thing I learned is that you can skip things in a string or array with stringorarray[2:1:2]
+I didnt know that was possible!
+
+----------------------------------------------------------------------------------------------------
+I also learned you can do if statements in arrays or return statements like so:
+my+list = [i**2 for i in range(1,10) if i % 2 ==0] Pretty cool!
+
+----------------------------------------------------------------------------------------------------
