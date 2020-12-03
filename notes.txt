@@ -2029,6 +2029,7 @@ def split(word):
     return [char for char in word]
 Assigns it to an array as well
 NOTE: char is not a key word. You could use any var you wanted here.
+you can do the same thing with list(str) WORD! Its shorter and I found it!
 ----------------------------------------------------------------------------------------------------
 When messing with codingkatas ensure that you RETURN something dont use a print statement...
 ----------------------------------------------------------------------------------------------------
@@ -2081,6 +2082,10 @@ I didnt see the point in doing i for i until I realized that you can attach a fu
 it as i. Its basically making an alias for more code so that is REALLY important in one liners.
 
 REGEX REGEX REGEX learn it know it
+
+LAMBDA - not sure what it is but read about it!
+
+"".join(array) see this alot. It will convert an array to a string in a jiff
 ----------------------------------------------------------------------------------------------------
 Reverse a string:
 stringname[::01]
@@ -2097,4 +2102,36 @@ DEMONSTRATION:
 ----------------------------------------------------------------------------------------------------
 READING ABOUT REGEX:
 Regex uses a \ as its escape character. As this is the same as pythons escape character it can
-make escaping a \ pretty difficult. As such you will need to use:
+make escaping a \ pretty difficult. As such you will need to use: \\\\ to show a single \ if
+you wanted to print that via regex. To combat this python has created a regex expression pattern
+to use it just specify an r before a string like so r"pattern".
+
+Special characters in REGEX:
+. The dot will match any character except a new line but you can make it match new lines with
+DOTALL flag
+^ The caret matches the START of a string
+$  The money sign matches the end of the string.
+* This tells regex to match as many repetitions of something as you want
+? causes RE to match any single character. ab? will match either a or b
+*?, +?, ?? GREEDY RE these will match as mnuch text as possible so they need to be used carefully
+  *? this will match as many single chars so the whole text essentially. Not sure about the others.
+{}'s specify how may of the preceding patern to find. For example a{6} will look for 6 a's
+  a{1,5} This will attept to match one to 5 patterns so one a up to 5 a's
+[a-m] []'s are for ranges but its also used to group output together. In addition you dont need to
+use |'s between the charaters as that is assumed. So if you do findall("[ab]") it will find ab a
+and b.
+see regex01.py
+NOTE: REGEX ONLY WORKS ON STRINGS. HOW TO USE REGEX? The syntax can be found here:
+https://docs.python.org/3/library/re.html
+
+There are multiple ways to use it one of which is below:
+import re
+re.match("[0-9]", variable/data)
+
+QUESTIONS ON REGEX:
+why use r? Remember r is useful of you have to use escape characeters escaping )'s or other such
+special characters is taxing just put an r in front of the "'s and it knows its regex.
+
+----------------------------------------------------------------------------------------------------
+
+
