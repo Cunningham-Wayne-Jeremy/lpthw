@@ -14,7 +14,7 @@ after that.
 ----------------------------------------------------------------------------------------------------
 VARIABLE SYNTAX
 Variables are easily declared in python just variable name = something
-----------------------------------------------------------------------------------------------------\
+----------------------------------------------------------------------------------------------------
 FORMATTING SYNTAX
 f is a formatting character and is used to reference variables inside strings
 for example print(f"My age is {my_age}.") pretty simple but keep in mind that in
@@ -2213,5 +2213,4 @@ numbers can be operated on like any other number!
 What you might not know is that the int function actually has an optional second parameter.
 
 int("110", 2)
-----------------------------------------------------------------------------------------------------
 
