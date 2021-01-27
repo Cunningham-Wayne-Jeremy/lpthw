@@ -1,4 +1,5 @@
 ﻿----------------------------------------------------------------------------------------------------
+PRINT SYNTAX
 The print command has ()s after it like so print()
 It can print letters numbers and variables
 # is the comment character
@@ -11,8 +12,10 @@ as PE (M&D) (A&S) so Parenthesis, exponents THEN Multiplication and division
 happen at the same time andaddition and subtraction happen at the same time
 after that.
 ----------------------------------------------------------------------------------------------------
+VARIABLE SYNTAX
 Variables are easily declared in python just variable name = something
-----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------\
+FORMATTING SYNTAX
 f is a formatting character and is used to reference variables inside strings
 for example print(f"My age is {my_age}.") pretty simple but keep in mind that in
 a print statement the f goes INSIDE the Parenthesis but outside the quotations
@@ -99,11 +102,12 @@ in to python.
 pydoc os
 
 ----------------------------------------------------------------------------------------------------
-Argv - you import this MODULE with sys like so from sys argv you can then assign it
-arguments that you will have to provide it to run the python script. So when
-typing in the command python3.6 you need to specify what the script for one then
-the following variables that will be sent to argv. When the script is ran it
-unpacks argv and will send your code those variables on request.
+Argv - you import this MODULE with sys like so:
+ from sys argv
+ you can then assign it arguments that you will have to provide it to run the python script. EXAMPLE
+script, firstname, lastname. 
+python script.py jeremy Cunningham
+When the script is ran it unpacks argv and will send your code those variables on request.
 ----------------------------------------------------------------------------------------------------
 You can import modules to Python this is to reduce the overhead if it was already
 usable by python and just not used. Modules are often called libraries.
@@ -231,7 +235,7 @@ I am unsure as to why and I dont even know how to check so I will have to return
 to this later to discover.
 ----------------------------------------------------------------------------------------------------
 Python separates multiple code lines by spacing but you can also use ; to
-separate code lines cd ../
+separate code lines 
 ----------------------------------------------------------------------------------------------------
 FUNCTIONS:
 IMPORTANT NOTES: User defined Functions have specific rules. They are listed here
@@ -239,8 +243,8 @@ IMPORTANT NOTES: User defined Functions have specific rules. They are listed her
 2.Function names can only be characters and _'s no other characters NONE OF
 THESE !@#$%^&*()-=+;:'",<.>/?[{]}\|
 3.Parenthesis go after the name
-4.Put arguments in the parenthesis, separate them by commas
-5.Arguments have to have unique names
+4.Put parameters in the parenthesis, separate them by commas
+5.parameters have to have unique names
 6.The parenthesis end with a :
 7.Indent all things the function will do with 4 characters or 1 single TAB
 8.DEINDENT at the end
@@ -295,9 +299,8 @@ BUT this DOES NOT:
 calculator(100,-,6)
 I do not know why....
 I DO know why its because the function calculator that you made uses eval which takes STRINGS and
-performs math on those strings. If you rewrote the function do handle ints by converting user input
-to strings like so:
-number1=int(input("Enter the first integer"))
+performs math on those strings.
+
 Still had to use eval though as operators need a dictionary to get around that
 dictionary is a key and a value pair like an associative array in javascript.
 SO its a bit advance but not THAT hard, however I will wait till we get there in futher activities.
@@ -308,7 +311,7 @@ ex19.1.py When using inputs they appear as they are in the code. Some coding
 languages execute those first but not python which is cool.
 ----------------------------------------------------------------------------------------------------
 You can supply the function with script variables and they do not have to have
-the same name as the arguments. But of course they can if you want.
+the same name as the parameters used for argv. But of course they can if you want.
 ----------------------------------------------------------------------------------------------------
 REMEMBER: EX19.py
 Does making the variable amount_of_cheese change the variable cheese_count in the function? No,
@@ -330,7 +333,7 @@ the rewind in ex20 unnecessary? REWIND IS NECESSARY otherwise blank values will 
 as I suspected
 ----------------------------------------------------------------------------------------------------
 REMEMBER:
-A file in Python is kind of like an old tape drive on
+A file in Python is kind of like an old tape drive
 a mainframe or maybe a DVD player. It has a ”read head,” and you can ”seek” this read head
 around the file to positions, then work with it there. Each time you do f.seek(0) you’re moving
 to the start of the file. Each time you do f.readline() you’re reading a line from the file and
@@ -408,7 +411,6 @@ def main(language_file, encoding, errors):
 ----------------------------------------------------------------------------------------------------
 REVIEW: errors strict?? Is this some sort of built in error checking?
 ----------------------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------------------
 MISUNDERSTOOD: When using print(f"") its only neccessary when you want to combine strings WITH
 variables.
 You can just do print(var) with no quotes and no f if you just want the var to print.(Tested this)
@@ -437,15 +439,15 @@ true in other coding languages as well
 
 EX:
 print("How intriguing that it makes the returned values a boolean automatically when running a
-< or > operation like 3+2<5-7. The answer of course is",3+2<5-7,".The less sign must change the
+< or > operation like 3+2<5-7. The answer of course is"false".The less sign must change the
 statement automatically within phython to a boolean return value")
 ----------------------------------------------------------------------------------------------------
-REMEMBER: when calling functions with arguments you can perform math and even call variables for the
+REMEMBER: when calling functions with parameters you can perform math and even call variables for the
 arguments
 
 ----------------------------------------------------------------------------------------------------
-REMEMBER: Arguments are place holders nothing more.
-The function below has 2 arguments but when you call the function the names of the supplied
+REMEMBER: Parameters are place holders nothing more.
+The function below has 2 parameters but when you call the function the names of the supplied
 arguments can be direct input or variables with different or the same name as the argument itself.
 For example:
 
@@ -472,7 +474,15 @@ In the below snippet of code which is found in excercise 24 you see that
  you can declare multiple variables at once using a function on the other
  end like so
  beans, jars, crates = secret_formula(start_point) # declares 3 variables
- and assigns them the function result
+ and assigns them the function result. If you decide to do this you must know that the 
+ variables suplied to the function are initialized IN the function making them local variables AND 
+ the names must match the function variable names.
+
+def secret_formula(started):
+    jelly_beans = started * 500
+    jars = jelly_beans / 1000
+    crated = jars / 1000
+    return jelly_beans, jars, crates	
 -----------------------------------------------------------------------------------------------------
 Also in ex24.py is the ability to assign multiple brackets values by
 assigning the return of the secret_formula function to a variable and then
@@ -517,9 +527,6 @@ long story short you can tun functions from another python script if you import 
 import. But why would you do this????
 
 Simple you can divide your functions, methods, conditional statments up for cleaner looking code
-Now is it wise for time complexity? Idk it may be an issue, especially with the scale of large
-companies.
-
 How can you avoid specifying the ex25 each time that you reference ex25?
 change the import statement to from ex25.py import *
 -----------------------------------------------------------------------------------------------------
@@ -553,8 +560,9 @@ sh*t you dont even need to be able to code to understand these concepts but havi
 background with java this was a VERY painful excercise but being the completionist that I am I sort
 of completed 28 but I did skip 27 as its a waste of time and energy.... moving on!
 -----------------------------------------------------------------------------------------------------
-SO just like functions, if statements in python are have colon and all things within the if statment
-(except the declaraiton) is indented and the indention determines what is in the then statement.
+SO just like functions, if statements in python all have a colon and all things within the if 
+statment (except the declaraiton) is indented and the indention determines what is in the then 
+statement.
 if 1 != 0: #This is the declaration
 	print("I tabbed here!")
 var=print("if statement is over")
@@ -594,7 +602,7 @@ varname = [1,2,3,4,5,6,7]
 I was wrong about lists they are actually called lists and there are arrays as well. So what is the
 difference between them?
 ----------------------------------------------------------------------------------------------------
-DECLARING A FOR LOOP
+FOR LOOP SYNTAX
 for i in something:
     print("print or do something here")
 The i can be replaced with anything you wish
@@ -646,7 +654,7 @@ def userinputwhileloop():
         print(f"What is the value of i? {i}")
         print("Numbers now: ", numbers)
         print("At the bottom i is {}".format(i))
-      print("The numbers: ")
+		print("The numbers: ")
 
     for num in numbers:
       print(num)
@@ -655,7 +663,8 @@ userinputwhileloop()
 So I modified the code and moved the incrementvalue BEFORE the numbers.append(i) and now the start
 of i is different and its actually stored in the numbers list but it still wont increment by 5,
  all it did was add 1 to the value after the first iteration. Still odd but I am going to continue
-with the excercises so I can move on.
+with the excercises so I can move on. Figured it out range has a built in increment value that has 
+a default value of 1. So it changed i back over and over again.
 ----------------------------------------------------------------------------------------------------
 LOGICAL ERROR!
 In excercise 35 I forgot to tab over the conditional statements in a while true loop.
@@ -2110,8 +2119,8 @@ my+list = [i**2 for i in range(1,10) if i % 2 ==0] Pretty cool!
 
 ----------------------------------------------------------------------------------------------------
 LAMBDA RESEARCH THIS ALOT!
-One of the more powerful aspects of Python is that it allows for a style of programming called 
-functional programming, which means that you’re allowed to pass functions around just as if they 
+One of the more powerful aspects of Python is that it allows for a style of programming called
+functional programming, which means that you’re allowed to pass functions around just as if they
 were variables or values. Sometimes we take this for granted, but not all languages allow this!
 
 Check out the code at the right. See the lambda bit? Typing
@@ -2123,14 +2132,14 @@ Is the same as
 def by_three(x):
   return x % 3 == 0
 
-Only we don’t need to actually give the function a name; it does its work and returns a value without 
+Only we don’t need to actually give the function a name; it does its work and returns a value without
 one. That’s why the function the lambda creates is an anonymous function.
 
-When we pass the lambda to filter, filter uses the lambda to determine what to filter, and the 
+When we pass the lambda to filter, filter uses the lambda to determine what to filter, and the
 second argument (my_list, which is just the numbers 0 – 15) is the list it does the filtering on.
 ----------------------------------------------------------------------------------------------------
 DICTIONARIES
-have the following attributes .items() .keys() and .values() 
+have the following attributes .items() .keys() and .values()
 REMEMBER THAT!
 ----------------------------------------------------------------------------------------------------
 BIT WISE.... WUT?
@@ -2138,16 +2147,16 @@ Just a Little BIT
 
 Welcome to an intro level explanation of bitwise operations in Python!
 
-Bitwise operations might seem a little esoteric and tricky at first, but you’ll get the hang of them 
+Bitwise operations might seem a little esoteric and tricky at first, but you’ll get the hang of them
 pretty quickly.
 
-Bitwise operations are operations that directly manipulate bits. In all computers, numbers are 
-represented with bits, a series of zeros and ones. In fact, pretty much everything in a computer is 
+Bitwise operations are operations that directly manipulate bits. In all computers, numbers are
+represented with bits, a series of zeros and ones. In fact, pretty much everything in a computer is
 represented by bits. This course will introduce you to the basic bitwise operations and then show you
 what you can do with them.
 
 Bitwise operators often tend to puzzle and mystify new programmers, so don’t worry if you are a
-little bit confused at first. To be honest, you aren’t really going to see bitwise operators in 
+little bit confused at first. To be honest, you aren’t really going to see bitwise operators in
 everyday programming. However, they do pop up from time to time, and when they do, you should have a
 general idea of what is going on.
 
@@ -2158,10 +2167,13 @@ print 9 | 4   # Bitwise OR
 print 12 ^ 42 # Bitwise XOR
 print ~88     # Bitwise NOT
 
-In Python, you can write numbers in binary format by starting the number with 0b. When doing so, the 
+In Python, you can write numbers in binary format by starting the number with 0b. When doing so, the
 numbers can be operated on like any other number!
 
 What you might not know is that the int function actually has an optional second parameter.
 
 int("110", 2)
 # ==> 6
+----------------------------------------------------------------------------------------------------
+ACTIVITY - Design Structure charts, and some psuedo code for a journal application or a lastpass
+replacement for your browser.
